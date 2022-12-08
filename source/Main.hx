@@ -28,26 +28,66 @@ class Main extends Sprite
 		[0, 2, 3, 5, 1, 8],
 		[0, 2, 3, 4, 5, 1, 8],
 		[0, 1, 2, 3, 4, 5, 6, 7, 8],
-		[0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
+		[0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
 	];
 	public static var gfxHud:Array<Dynamic> = [
 		[0, 1, 2, 3],
 		[0, 2, 3, 0, 1, 3],
 		[0, 2, 3, 4, 0, 1, 3],
 		[0, 1, 2, 3, 4, 0, 1, 2, 3],
-		[0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 5, 6, 7, 5, 6, 5, 7, 0, 1, 2, 3, 0, 0, 0],
+		[0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 5, 6, 7, 5, 6, 5, 7, 0, 1, 2, 3, 0, 0, 0]
 	];
 	public static var gfxAlterInd:Array<Dynamic> = [
 		[2, 3, 3, 2],
 		[0, 1, 2, 2, 1, 0],
 		[0, 1, 2, 3, 2, 1, 0],
-		[0, 1, 2, 1, 3, 1, 2, 1, 0],
+		[0, 1, 2, 1, 3, 1, 2, 1, 0]
 	];
 	public static var letterMax:Array<Int> = [26, 9, 4];
 	public static var skinName:Array<String> = ['assets', 'alter'];
 	public static var gfxDir:Array<String> = ['SHARPLEFT', 'LEFT', 'DOWN', 'UP', 'RIGHT', 'SPACE', 'PLUS', 'SQUARE'];
-	public static var charDir:Array<String> = ['LEFT', 'LEFT', 'LEFT', 'LEFT', 'LEFT', 'DOWN', 'UP', 'RIGHT', 'UP', 'DOWN', 'LEFT', 'UP', 'UP', 'RIGHT', 'UP', 'UP', 'RIGHT', 'LEFT', 'LEFT', 'DOWN', 'UP', 'RIGHT', 'RIGHT', 'RIGHT', 'RIGHT'];
-	public static var gfxLetter:Array<String> = ['aqua', 'deep', 'forest', 'mardi', 'purple', 'blue', 'green', 'red', 'white', 'old', 'ultrablue', 'orange', 'infra', 'ultrared', 'pink', 'lavender', 'blurple', 'ultrayellow', 'yellow', 'violet', 'black', 'dark', 'gray', 'jonquil', 'pinky'];
+	public static var charDir:Array<String> = [
+		'LEFT', 'LEFT', 'LEFT', 'LEFT', 'LEFT',
+		'DOWN',
+		'UP',
+		'RIGHT',
+		'UP',
+		'DOWN',
+		'LEFT',
+		'UP', 'UP',
+		'RIGHT',
+		'UP', 'UP',
+		'RIGHT',
+		'LEFT', 'LEFT',
+		'DOWN',
+		'UP',
+		'RIGHT', 'RIGHT', 'RIGHT', 'RIGHT'
+	];
+	public static var gfxLetter:Array<String> = [
+		'aqua',
+		'deep',
+		'forest',
+		'mardi',
+		'purple',
+		'blue',
+		'green',
+		'red',
+		'white',
+		'old',
+		'ultrablue',
+		'orange',
+		'infra',
+		'ultrared',
+		'pink',
+		'lavender',
+		'blurple',
+		'ultrayellow', 'yellow',
+		'violet',
+		'black', 'dark',
+		'gray',
+		'jonquil',
+		'pinky'
+	];
 
 	// You can pretty much ignore everything from here on - your code should go in your states.
 
@@ -98,7 +138,7 @@ class Main extends Sprite
 		initialState = TitleState;
 		#end
 
-		addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen));
+		addChild(new FlxGame(gameWidth, gameHeight, initialState, #if (flixel < "5.0.0") zoom, #end framerate, framerate, skipSplash, startFullscreen));
 
 		#if !mobile
 		fpsVar = new FPS(10, 3, 0xFFFFFF);
