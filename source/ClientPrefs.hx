@@ -50,15 +50,30 @@ class ClientPrefs {
 		K, DOWN,
 		L, RIGHT,
 
+		Q, NONE,
+		S, NONE,
+		E, NONE,
 		A, NONE,
 		S, NONE,
 		D, NONE,
 		F, NONE,
 		SPACE, NONE,
+		R, NONE,
+		V, NONE,
+		SPACE, NONE,
+		T, NONE,
+		K, NONE,
+		SPACE, NONE,
+		Y, NONE,
+		B, NONE,
+		U, NONE,
 		H, NONE,
 		J, NONE,
 		K, NONE,
-		L, NONE
+		L, NONE,
+		4, NONE,
+		2, NONE,
+		1, NONE,
 	];
 	//Every key has two binds, these binds are defined on defaultKeys! If you want your control to be changeable, you have to add it on ControlsSubState (inside OptionsState)'s list
 	public static var keyBinds:Array<Dynamic> = [

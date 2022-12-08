@@ -77,6 +77,23 @@ enum abstract Action(String) to String from String
 	var B7 = 'b7';
 	var B8 = 'b8';
 	var B9 = 'b9';
+	var B10 = 'b10';
+	var B11 = 'b11';
+	var B12 = 'b12';
+	var B13 = 'b13';
+	var B14 = 'b14';
+	var B15 = 'b15';
+	var B16 = 'b16';
+	var B17 = 'b17';
+	var B18 = 'b18';
+	var B19 = 'b12';
+	var B20 = 'b20';
+	var B21 = 'b21';
+	var B22 = 'b22';
+	var B23 = 'b23';
+	var B24 = 'b24';
+	var B25 = 'b25';
+	var B26 = 'b26';
 
 	var B1_P = 'b1-press';
 	var B2_P = 'b2-press';
@@ -87,6 +104,23 @@ enum abstract Action(String) to String from String
 	var B7_P = 'b7-press';
 	var B8_P = 'b8-press';
 	var B9_P = 'b9-press';
+	var B10_P = 'b10-press';
+	var B11_P = 'b11-press';
+	var B12_P = 'b12-press';
+	var B13_P = 'b13-press';
+	var B14_P = 'b14-press';
+	var B15_P = 'b15-press';
+	var B16_P = 'b16-press';
+	var B17_P = 'b17-press';
+	var B18_P = 'b18-press';
+	var B19_P = 'b19-press';
+	var B20_P = 'b20-press';
+	var B21_P = 'b21-press';
+	var B22_P = 'b22-press';
+	var B23_P = 'b23-press';
+	var B24_P = 'b24-press';
+	var B25_P = 'b25-press';
+	var B26_P = 'b26-press';
 
 	var B1_R = 'b1-release';
 	var B2_R = 'b2-release';
@@ -97,6 +131,23 @@ enum abstract Action(String) to String from String
 	var B7_R = 'b7-release';
 	var B8_R = 'b8-release';
 	var B9_R = 'b9-release';
+	var B10_R = 'b10-release';
+	var B11_R = 'b11-release';
+	var B12_R = 'b12-release';
+	var B13_R = 'b13-release';
+	var B14_R = 'b14-release';
+	var B15_R = 'b15-release';
+	var B16_R = 'b16-release';
+	var B17_R = 'b17-release';
+	var B18_R = 'b18-release';
+	var B19_R = 'b19-release';
+	var B20_R = 'b20-release';
+	var B21_R = 'b21-release';
+	var B22_R = 'b22-release';
+	var B23_R = 'b23-release';
+	var B24_R = 'b24-release';
+	var B25_R = 'b25-release';
+	var B26_R = 'b26-release';
 }
 #else
 @:enum
@@ -231,6 +282,23 @@ enum Control
 	B7;
 	B8;
 	B9;
+	B10;
+	B11;
+	B12;
+	B13;
+	B14;
+	B15;
+	B16;
+	B17;
+	B18;
+	B19;
+	B20;
+	B21;
+	B22;
+	B23;
+	B24;
+	B25;
+	B26;
 }
 
 enum KeyboardScheme

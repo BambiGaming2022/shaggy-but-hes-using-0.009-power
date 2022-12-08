@@ -32,9 +32,9 @@ class Note extends FlxSprite
 	public var colorSwap:ColorSwap;
 	public var inEditor:Bool = false;
 
-	public static var scales:Array<Float> = [0.7, 0.6, 0.55, 0.46];
-	public static var swidths:Array<Float> = [160, 120, 110, 90];
-	public static var posRest:Array<Int> = [0, 35, 50, 70];
+	public static var scales:Array<Float> = [0.7, 0.6, 0.55, 0.46, 0.24];
+	public static var swidths:Array<Float> = [160, 120, 110, 90, 48];
+	public static var posRest:Array<Int> = [0, 35, 50, 70, 70, 70, 70,];
 
 	public static var swagWidth:Float = 0.7;
 	public static var PURP_NOTE:Int = 0;
@@ -198,7 +198,7 @@ class Note extends FlxSprite
 	}
 
 	function loadNoteAnims() {
-		for (i in 0...9)
+		for (i in 0...26)
 		{
 			animation.addByPrefix(Main.gfxLetter[i], Main.gfxLetter[i] + '0');
 
