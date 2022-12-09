@@ -93,7 +93,6 @@ enum abstract Action(String) to String from String
 	var B23 = 'b23';
 	var B24 = 'b24';
 	var B25 = 'b25';
-	var B26 = 'b26';
 
 	var B1_P = 'b1-press';
 	var B2_P = 'b2-press';
@@ -120,7 +119,6 @@ enum abstract Action(String) to String from String
 	var B23_P = 'b23-press';
 	var B24_P = 'b24-press';
 	var B25_P = 'b25-press';
-	var B26_P = 'b26-press';
 
 	var B1_R = 'b1-release';
 	var B2_R = 'b2-release';
@@ -147,7 +145,6 @@ enum abstract Action(String) to String from String
 	var B23_R = 'b23-release';
 	var B24_R = 'b24-release';
 	var B25_R = 'b25-release';
-	var B26_R = 'b26-release';
 }
 #else
 @:enum
