@@ -11,7 +11,6 @@ import flixel.input.gamepad.FlxGamepadButton;
 import flixel.input.gamepad.FlxGamepadInputID;
 import flixel.input.keyboard.FlxKey;
 
-#if (haxe >= "4.0.0")
 enum abstract Action(String) to String from String
 {
 	var UI_UP = "ui_up";
@@ -42,7 +41,6 @@ enum abstract Action(String) to String from String
 	var BACK = "back";
 	var PAUSE = "pause";
 	var RESET = "reset";
-
 	var A1 = 'a1';
 	var A2 = 'a2';
 	var A3 = 'a3';
@@ -50,7 +48,6 @@ enum abstract Action(String) to String from String
 	var A5 = 'a5';
 	var A6 = 'a6';
 	var A7 = 'a7';
-
 	var A1_P = 'a1-press';
 	var A2_P = 'a2-press';
 	var A3_P = 'a3-press';
@@ -58,7 +55,6 @@ enum abstract Action(String) to String from String
 	var A5_P = 'a5-press';
 	var A6_P = 'a6-press';
 	var A7_P = 'a7-press';
-
 	var A1_R = 'a1-release';
 	var A2_R = 'a2-release';
 	var A3_R = 'a3-release';
@@ -66,8 +62,6 @@ enum abstract Action(String) to String from String
 	var A5_R = 'a5-release';
 	var A6_R = 'a6-release';
 	var A7_R = 'a7-release';
-
-
 	var B1 = 'b1';
 	var B2 = 'b2';
 	var B3 = 'b3';
@@ -93,7 +87,6 @@ enum abstract Action(String) to String from String
 	var B23 = 'b23';
 	var B24 = 'b24';
 	var B25 = 'b25';
-
 	var B1_P = 'b1-press';
 	var B2_P = 'b2-press';
 	var B3_P = 'b3-press';
@@ -119,7 +112,6 @@ enum abstract Action(String) to String from String
 	var B23_P = 'b23-press';
 	var B24_P = 'b24-press';
 	var B25_P = 'b25-press';
-
 	var B1_R = 'b1-release';
 	var B2_R = 'b2-release';
 	var B3_R = 'b3-release';
@@ -146,95 +138,6 @@ enum abstract Action(String) to String from String
 	var B24_R = 'b24-release';
 	var B25_R = 'b25-release';
 }
-#else
-@:enum
-abstract Action(String) to String from String
-{
-	var UI_UP = "ui_up";
-	var UI_LEFT = "ui_left";
-	var UI_RIGHT = "ui_right";
-	var UI_DOWN = "ui_down";
-	var UI_UP_P = "ui_up-press";
-	var UI_LEFT_P = "ui_left-press";
-	var UI_RIGHT_P = "ui_right-press";
-	var UI_DOWN_P = "ui_down-press";
-	var UI_UP_R = "ui_up-release";
-	var UI_LEFT_R = "ui_left-release";
-	var UI_RIGHT_R = "ui_right-release";
-	var UI_DOWN_R = "ui_down-release";
-	var NOTE_UP = "note_up";
-	var NOTE_LEFT = "note_left";
-	var NOTE_RIGHT = "note_right";
-	var NOTE_DOWN = "note_down";
-	var NOTE_UP_P = "note_up-press";
-	var NOTE_LEFT_P = "note_left-press";
-	var NOTE_RIGHT_P = "note_right-press";
-	var NOTE_DOWN_P = "note_down-press";
-	var NOTE_UP_R = "note_up-release";
-	var NOTE_LEFT_R = "note_left-release";
-	var NOTE_RIGHT_R = "note_right-release";
-	var NOTE_DOWN_R = "note_down-release";
-	var ACCEPT = "accept";
-	var BACK = "back";
-	var PAUSE = "pause";
-	var RESET = "reset";
-
-	var A1 = 'a1';
-	var A2 = 'a2';
-	var A3 = 'a3';
-	var A4 = 'a4';
-	var A5 = 'a5';
-	var A6 = 'a6';
-	var A7 = 'a7';
-
-	var A1_P = 'a1-press';
-	var A2_P = 'a2-press';
-	var A3_P = 'a3-press';
-	var A4_P = 'a4-press';
-	var A5_P = 'a5-press';
-	var A6_P = 'a6-press';
-	var A7_P = 'a7-press';
-
-	var A1_R = 'a1-release';
-	var A2_R = 'a2-release';
-	var A3_R = 'a3-release';
-	var A4_R = 'a4-release';
-	var A5_R = 'a5-release';
-	var A6_R = 'a6-release';
-	var A7_R = 'a7-release';
-
-
-	var B1 = 'b1';
-	var B2 = 'b2';
-	var B3 = 'b3';
-	var B4 = 'b4';
-	var B5 = 'b5';
-	var B6 = 'b6';
-	var B7 = 'b7';
-	var B8 = 'b8';
-	var B9 = 'b9';
-
-	var B1_P = 'b1-press';
-	var B2_P = 'b2-press';
-	var B3_P = 'b3-press';
-	var B4_P = 'b4-press';
-	var B5_P = 'b5-press';
-	var B6_P = 'b6-press';
-	var B7_P = 'b7-press';
-	var B8_P = 'b8-press';
-	var B9_P = 'b9-press';
-
-	var B1_R = 'b1-release';
-	var B2_R = 'b2-release';
-	var B3_R = 'b3-release';
-	var B4_R = 'b4-release';
-	var B5_R = 'b5-release';
-	var B6_R = 'b6-release';
-	var B7_R = 'b7-release';
-	var B8_R = 'b8-release';
-	var B9_R = 'b9-release';
-}
-#end
 
 enum Device
 {
@@ -269,7 +172,6 @@ enum Control
 	A5;
 	A6;
 	A7;
-
 	B1;
 	B2;
 	B3;
@@ -295,7 +197,6 @@ enum Control
 	B23;
 	B24;
 	B25;
-	B26;
 }
 
 enum KeyboardScheme
@@ -365,7 +266,6 @@ class Controls extends FlxActionSet
 	var _a6R = new FlxActionDigital(Action.A6_R);
 	var _a7R = new FlxActionDigital(Action.A7_R);
 
-
 	var _b1 = new FlxActionDigital(Action.B1);
 	var _b2 = new FlxActionDigital(Action.B2);
 	var _b3 = new FlxActionDigital(Action.B3);
@@ -375,7 +275,24 @@ class Controls extends FlxActionSet
 	var _b7 = new FlxActionDigital(Action.B7);
 	var _b8 = new FlxActionDigital(Action.B8);
 	var _b9 = new FlxActionDigital(Action.B9);
+	var _b10 = new FlxActionDigital(Action.B10);
+	var _b11 = new FlxActionDigital(Action.B11);
+	var _b12 = new FlxActionDigital(Action.B12);
+	var _b13 = new FlxActionDigital(Action.B13);
+	var _b14 = new FlxActionDigital(Action.B14);
+	var _b15 = new FlxActionDigital(Action.B15);
+	var _b16 = new FlxActionDigital(Action.B16);
+	var _b17 = new FlxActionDigital(Action.B17);
+	var _b18 = new FlxActionDigital(Action.B18);
+	var _b19 = new FlxActionDigital(Action.B19);
+	var _b20 = new FlxActionDigital(Action.B20);
+	var _b21 = new FlxActionDigital(Action.B21);
+	var _b22 = new FlxActionDigital(Action.B22);
+	var _b23 = new FlxActionDigital(Action.B23);
+	var _b24 = new FlxActionDigital(Action.B24);
+	var _b25 = new FlxActionDigital(Action.B25);
 
+	// var _b26 = new FlxActionDigital(Action.B26);
 	var _b1P = new FlxActionDigital(Action.B1_P);
 	var _b2P = new FlxActionDigital(Action.B2_P);
 	var _b3P = new FlxActionDigital(Action.B3_P);
@@ -385,6 +302,22 @@ class Controls extends FlxActionSet
 	var _b7P = new FlxActionDigital(Action.B7_P);
 	var _b8P = new FlxActionDigital(Action.B8_P);
 	var _b9P = new FlxActionDigital(Action.B9_P);
+	var _b10P = new FlxActionDigital(Action.B10_P);
+	var _b11P = new FlxActionDigital(Action.B11_P);
+	var _b12P = new FlxActionDigital(Action.B12_P);
+	var _b13P = new FlxActionDigital(Action.B13_P);
+	var _b14P = new FlxActionDigital(Action.B14_P);
+	var _b15P = new FlxActionDigital(Action.B15_P);
+	var _b16P = new FlxActionDigital(Action.B16_P);
+	var _b17P = new FlxActionDigital(Action.B17_P);
+	var _b18P = new FlxActionDigital(Action.B18_P);
+	var _b19P = new FlxActionDigital(Action.B19_P);
+	var _b20P = new FlxActionDigital(Action.B20_P);
+	var _b21P = new FlxActionDigital(Action.B21_P);
+	var _b22P = new FlxActionDigital(Action.B22_P);
+	var _b23P = new FlxActionDigital(Action.B23_P);
+	var _b24P = new FlxActionDigital(Action.B24_P);
+	var _b25P = new FlxActionDigital(Action.B25_P);
 
 	var _b1R = new FlxActionDigital(Action.B1_R);
 	var _b2R = new FlxActionDigital(Action.B2_R);
@@ -395,12 +328,24 @@ class Controls extends FlxActionSet
 	var _b7R = new FlxActionDigital(Action.B7_R);
 	var _b8R = new FlxActionDigital(Action.B8_R);
 	var _b9R = new FlxActionDigital(Action.B9_R);
+	var _b10R = new FlxActionDigital(Action.B10_R);
+	var _b11R = new FlxActionDigital(Action.B11_R);
+	var _b12R = new FlxActionDigital(Action.B12_R);
+	var _b13R = new FlxActionDigital(Action.B13_R);
+	var _b14R = new FlxActionDigital(Action.B14_R);
+	var _b15R = new FlxActionDigital(Action.B15_R);
+	var _b16R = new FlxActionDigital(Action.B16_R);
+	var _b17R = new FlxActionDigital(Action.B17_R);
+	var _b18R = new FlxActionDigital(Action.B18_R);
+	var _b19R = new FlxActionDigital(Action.B19_R);
+	var _b20R = new FlxActionDigital(Action.B20_R);
+	var _b21R = new FlxActionDigital(Action.B21_R);
+	var _b22R = new FlxActionDigital(Action.B22_R);
+	var _b23R = new FlxActionDigital(Action.B23_R);
+	var _b24R = new FlxActionDigital(Action.B24_R);
+	var _b25R = new FlxActionDigital(Action.B25_R);
 
-	#if (haxe >= "4.0.0")
 	var byName:Map<String, FlxActionDigital> = [];
-	#else
-	var byName:Map<String, FlxActionDigital> = new Map<String, FlxActionDigital>();
-	#end
 
 	public var gamepadsAdded:Array<Int> = [];
 	public var keyboardScheme = KeyboardScheme.None;
@@ -545,62 +490,678 @@ class Controls extends FlxActionSet
 	inline function get_RESET()
 		return _reset.check();
 
-	public var A1(get, never):Bool; inline function get_A1() {return _a1.check();}
-	public var A2(get, never):Bool; inline function get_A2() {return _a2.check();}
-	public var A3(get, never):Bool; inline function get_A3() {return _a3.check();}
-	public var A4(get, never):Bool; inline function get_A4() {return _a4.check();}
-	public var A5(get, never):Bool; inline function get_A5() {return _a5.check();}
-	public var A6(get, never):Bool; inline function get_A6() {return _a6.check();}
-	public var A7(get, never):Bool; inline function get_A7() {return _a7.check();}
+	public var A1(get, never):Bool;
 
-	public var A1_P(get, never):Bool; inline function get_A1_P() {return _a1P.check();}
-	public var A2_P(get, never):Bool; inline function get_A2_P() {return _a2P.check();}
-	public var A3_P(get, never):Bool; inline function get_A3_P() {return _a3P.check();}
-	public var A4_P(get, never):Bool; inline function get_A4_P() {return _a4P.check();}
-	public var A5_P(get, never):Bool; inline function get_A5_P() {return _a5P.check();}
-	public var A6_P(get, never):Bool; inline function get_A6_P() {return _a6P.check();}
-	public var A7_P(get, never):Bool; inline function get_A7_P() {return _a7P.check();}
+	inline function get_A1()
+	{
+		return _a1.check();
+	}
 
-	public var A1_R(get, never):Bool; inline function get_A1_R() {return _a1R.check();}
-	public var A2_R(get, never):Bool; inline function get_A2_R() {return _a2R.check();}
-	public var A3_R(get, never):Bool; inline function get_A3_R() {return _a3R.check();}
-	public var A4_R(get, never):Bool; inline function get_A4_R() {return _a4R.check();}
-	public var A5_R(get, never):Bool; inline function get_A5_R() {return _a5R.check();}
-	public var A6_R(get, never):Bool; inline function get_A6_R() {return _a6R.check();}
-	public var A7_R(get, never):Bool; inline function get_A7_R() {return _a7R.check();}
+	public var A2(get, never):Bool;
 
+	inline function get_A2()
+	{
+		return _a2.check();
+	}
 
-	public var B1(get, never):Bool; inline function get_B1() {return _b1.check();}
-	public var B2(get, never):Bool; inline function get_B2() {return _b2.check();}
-	public var B3(get, never):Bool; inline function get_B3() {return _b3.check();}
-	public var B4(get, never):Bool; inline function get_B4() {return _b4.check();}
-	public var B5(get, never):Bool; inline function get_B5() {return _b5.check();}
-	public var B6(get, never):Bool; inline function get_B6() {return _b6.check();}
-	public var B7(get, never):Bool; inline function get_B7() {return _b7.check();}
-	public var B8(get, never):Bool; inline function get_B8() {return _b8.check();}
-	public var B9(get, never):Bool; inline function get_B9() {return _b9.check();}
+	public var A3(get, never):Bool;
 
-	public var B1_P(get, never):Bool; inline function get_B1_P() {return _b1P.check();}
-	public var B2_P(get, never):Bool; inline function get_B2_P() {return _b2P.check();}
-	public var B3_P(get, never):Bool; inline function get_B3_P() {return _b3P.check();}
-	public var B4_P(get, never):Bool; inline function get_B4_P() {return _b4P.check();}
-	public var B5_P(get, never):Bool; inline function get_B5_P() {return _b5P.check();}
-	public var B6_P(get, never):Bool; inline function get_B6_P() {return _b6P.check();}
-	public var B7_P(get, never):Bool; inline function get_B7_P() {return _b7P.check();}
-	public var B8_P(get, never):Bool; inline function get_B8_P() {return _b8P.check();}
-	public var B9_P(get, never):Bool; inline function get_B9_P() {return _b9P.check();}
+	inline function get_A3()
+	{
+		return _a3.check();
+	}
 
-	public var B1_R(get, never):Bool; inline function get_B1_R() {return _b1R.check();}
-	public var B2_R(get, never):Bool; inline function get_B2_R() {return _b2R.check();}
-	public var B3_R(get, never):Bool; inline function get_B3_R() {return _b3R.check();}
-	public var B4_R(get, never):Bool; inline function get_B4_R() {return _b4R.check();}
-	public var B5_R(get, never):Bool; inline function get_B5_R() {return _b5R.check();}
-	public var B6_R(get, never):Bool; inline function get_B6_R() {return _b6R.check();}
-	public var B7_R(get, never):Bool; inline function get_B7_R() {return _b7R.check();}
-	public var B8_R(get, never):Bool; inline function get_B8_R() {return _b8R.check();}
-	public var B9_R(get, never):Bool; inline function get_B9_R() {return _b9R.check();}
+	public var A4(get, never):Bool;
 
-	#if (haxe >= "4.0.0")
+	inline function get_A4()
+	{
+		return _a4.check();
+	}
+
+	public var A5(get, never):Bool;
+
+	inline function get_A5()
+	{
+		return _a5.check();
+	}
+
+	public var A6(get, never):Bool;
+
+	inline function get_A6()
+	{
+		return _a6.check();
+	}
+
+	public var A7(get, never):Bool;
+
+	inline function get_A7()
+	{
+		return _a7.check();
+	}
+
+	public var A1_P(get, never):Bool;
+
+	inline function get_A1_P()
+	{
+		return _a1P.check();
+	}
+
+	public var A2_P(get, never):Bool;
+
+	inline function get_A2_P()
+	{
+		return _a2P.check();
+	}
+
+	public var A3_P(get, never):Bool;
+
+	inline function get_A3_P()
+	{
+		return _a3P.check();
+	}
+
+	public var A4_P(get, never):Bool;
+
+	inline function get_A4_P()
+	{
+		return _a4P.check();
+	}
+
+	public var A5_P(get, never):Bool;
+
+	inline function get_A5_P()
+	{
+		return _a5P.check();
+	}
+
+	public var A6_P(get, never):Bool;
+
+	inline function get_A6_P()
+	{
+		return _a6P.check();
+	}
+
+	public var A7_P(get, never):Bool;
+
+	inline function get_A7_P()
+	{
+		return _a7P.check();
+	}
+
+	public var A1_R(get, never):Bool;
+
+	inline function get_A1_R()
+	{
+		return _a1R.check();
+	}
+
+	public var A2_R(get, never):Bool;
+
+	inline function get_A2_R()
+	{
+		return _a2R.check();
+	}
+
+	public var A3_R(get, never):Bool;
+
+	inline function get_A3_R()
+	{
+		return _a3R.check();
+	}
+
+	public var A4_R(get, never):Bool;
+
+	inline function get_A4_R()
+	{
+		return _a4R.check();
+	}
+
+	public var A5_R(get, never):Bool;
+
+	inline function get_A5_R()
+	{
+		return _a5R.check();
+	}
+
+	public var A6_R(get, never):Bool;
+
+	inline function get_A6_R()
+	{
+		return _a6R.check();
+	}
+
+	public var A7_R(get, never):Bool;
+
+	inline function get_A7_R()
+	{
+		return _a7R.check();
+	}
+
+	public var B1(get, never):Bool;
+
+	inline function get_B1()
+	{
+		return _b1.check();
+	}
+
+	public var B2(get, never):Bool;
+
+	inline function get_B2()
+	{
+		return _b2.check();
+	}
+
+	public var B3(get, never):Bool;
+
+	inline function get_B3()
+	{
+		return _b3.check();
+	}
+
+	public var B4(get, never):Bool;
+
+	inline function get_B4()
+	{
+		return _b4.check();
+	}
+
+	public var B5(get, never):Bool;
+
+	inline function get_B5()
+	{
+		return _b5.check();
+	}
+
+	public var B6(get, never):Bool;
+
+	inline function get_B6()
+	{
+		return _b6.check();
+	}
+
+	public var B7(get, never):Bool;
+
+	inline function get_B7()
+	{
+		return _b7.check();
+	}
+
+	public var B8(get, never):Bool;
+
+	inline function get_B8()
+	{
+		return _b8.check();
+	}
+
+	public var B9(get, never):Bool;
+
+	inline function get_B9()
+	{
+		return _b9.check();
+	}
+
+	public var B10(get, never):Bool;
+
+	inline function get_B10()
+	{
+		return _b10.check();
+	}
+
+	public var B11(get, never):Bool;
+
+	inline function get_B11()
+	{
+		return _b11.check();
+	}
+
+	public var B12(get, never):Bool;
+
+	inline function get_B12()
+	{
+		return _b12.check();
+	}
+
+	public var B13(get, never):Bool;
+
+	inline function get_B13()
+	{
+		return _b13.check();
+	}
+
+	public var B14(get, never):Bool;
+
+	inline function get_B14()
+	{
+		return _b14.check();
+	}
+
+	public var B15(get, never):Bool;
+
+	inline function get_B15()
+	{
+		return _b15.check();
+	}
+
+	public var B16(get, never):Bool;
+
+	inline function get_B16()
+	{
+		return _b16.check();
+	}
+
+	public var B17(get, never):Bool;
+
+	inline function get_B17()
+	{
+		return _b17.check();
+	}
+
+	public var B18(get, never):Bool;
+
+	inline function get_B18()
+	{
+		return _b18.check();
+	}
+
+	public var B19(get, never):Bool;
+
+	inline function get_B19()
+	{
+		return _b19.check();
+	}
+
+	public var B20(get, never):Bool;
+
+	inline function get_B20()
+	{
+		return _b20.check();
+	}
+
+	public var B21(get, never):Bool;
+
+	inline function get_B21()
+	{
+		return _b21.check();
+	}
+
+	public var B22(get, never):Bool;
+
+	inline function get_B22()
+	{
+		return _b22.check();
+	}
+
+	public var B23(get, never):Bool;
+
+	inline function get_B23()
+	{
+		return _b23.check();
+	}
+
+	public var B24(get, never):Bool;
+
+	inline function get_B24()
+	{
+		return _b24.check();
+	}
+
+	public var B25(get, never):Bool;
+
+	inline function get_B25()
+	{
+		return _b25.check();
+	}
+
+	public var B1_P(get, never):Bool;
+
+	inline function get_B1_P()
+	{
+		return _b1P.check();
+	}
+
+	public var B2_P(get, never):Bool;
+
+	inline function get_B2_P()
+	{
+		return _b2P.check();
+	}
+
+	public var B3_P(get, never):Bool;
+
+	inline function get_B3_P()
+	{
+		return _b3P.check();
+	}
+
+	public var B4_P(get, never):Bool;
+
+	inline function get_B4_P()
+	{
+		return _b4P.check();
+	}
+
+	public var B5_P(get, never):Bool;
+
+	inline function get_B5_P()
+	{
+		return _b5P.check();
+	}
+
+	public var B6_P(get, never):Bool;
+
+	inline function get_B6_P()
+	{
+		return _b6P.check();
+	}
+
+	public var B7_P(get, never):Bool;
+
+	inline function get_B7_P()
+	{
+		return _b7P.check();
+	}
+
+	public var B8_P(get, never):Bool;
+
+	inline function get_B8_P()
+	{
+		return _b8P.check();
+	}
+
+	public var B9_P(get, never):Bool;
+
+	inline function get_B9_P()
+	{
+		return _b9P.check();
+	}
+
+	public var B10_P(get, never):Bool;
+
+	inline function get_B10_P()
+	{
+		return _b10P.check();
+	}
+
+	public var B11_P(get, never):Bool;
+
+	inline function get_B11_P()
+	{
+		return _b11P.check();
+	}
+
+	public var B12_P(get, never):Bool;
+
+	inline function get_B12_P()
+	{
+		return _b12P.check();
+	}
+
+	public var B13_P(get, never):Bool;
+
+	inline function get_B13_P()
+	{
+		return _b13P.check();
+	}
+
+	public var B14_P(get, never):Bool;
+
+	inline function get_B14_P()
+	{
+		return _b14P.check();
+	}
+
+	public var B15_P(get, never):Bool;
+
+	inline function get_B15_P()
+	{
+		return _b15P.check();
+	}
+
+	public var B16_P(get, never):Bool;
+
+	inline function get_B16_P()
+	{
+		return _b16P.check();
+	}
+
+	public var B17_P(get, never):Bool;
+
+	inline function get_B17_P()
+	{
+		return _b17P.check();
+	}
+
+	public var B18_P(get, never):Bool;
+
+	inline function get_B18_P()
+	{
+		return _b18P.check();
+	}
+
+	public var B19_P(get, never):Bool;
+
+	inline function get_B19_P()
+	{
+		return _b19P.check();
+	}
+
+	public var B20_P(get, never):Bool;
+
+	inline function get_B20_P()
+	{
+		return _b20P.check();
+	}
+
+	public var B21_P(get, never):Bool;
+
+	inline function get_B21_P()
+	{
+		return _b21P.check();
+	}
+
+	public var B22_P(get, never):Bool;
+
+	inline function get_B22_P()
+	{
+		return _b22P.check();
+	}
+
+	public var B23_P(get, never):Bool;
+
+	inline function get_B23_P()
+	{
+		return _b23P.check();
+	}
+
+	public var B24_P(get, never):Bool;
+
+	inline function get_B24_P()
+	{
+		return _b24P.check();
+	}
+
+	public var B25_P(get, never):Bool;
+
+	inline function get_B25_P()
+	{
+		return _b25P.check();
+	}
+
+	public var B1_R(get, never):Bool;
+
+	inline function get_B1_R()
+	{
+		return _b1R.check();
+	}
+
+	public var B2_R(get, never):Bool;
+
+	inline function get_B2_R()
+	{
+		return _b2R.check();
+	}
+
+	public var B3_R(get, never):Bool;
+
+	inline function get_B3_R()
+	{
+		return _b3R.check();
+	}
+
+	public var B4_R(get, never):Bool;
+
+	inline function get_B4_R()
+	{
+		return _b4R.check();
+	}
+
+	public var B5_R(get, never):Bool;
+
+	inline function get_B5_R()
+	{
+		return _b5R.check();
+	}
+
+	public var B6_R(get, never):Bool;
+
+	inline function get_B6_R()
+	{
+		return _b6R.check();
+	}
+
+	public var B7_R(get, never):Bool;
+
+	inline function get_B7_R()
+	{
+		return _b7R.check();
+	}
+
+	public var B8_R(get, never):Bool;
+
+	inline function get_B8_R()
+	{
+		return _b8R.check();
+	}
+
+	public var B9_R(get, never):Bool;
+
+	inline function get_B9_R()
+	{
+		return _b9R.check();
+	}
+
+	public var B10_R(get, never):Bool;
+
+	inline function get_B10_R()
+	{
+		return _b10R.check();
+	}
+
+	public var B11_R(get, never):Bool;
+
+	inline function get_B11_R()
+	{
+		return _b11R.check();
+	}
+
+	public var B12_R(get, never):Bool;
+
+	inline function get_B12_R()
+	{
+		return _b12R.check();
+	}
+
+	public var B13_R(get, never):Bool;
+
+	inline function get_B13_R()
+	{
+		return _b13R.check();
+	}
+
+	public var B14_R(get, never):Bool;
+
+	inline function get_B14_R()
+	{
+		return _b14R.check();
+	}
+
+	public var B15_R(get, never):Bool;
+
+	inline function get_B15_R()
+	{
+		return _b15R.check();
+	}
+
+	public var B16_R(get, never):Bool;
+
+	inline function get_B16_R()
+	{
+		return _b16R.check();
+	}
+
+	public var B17_R(get, never):Bool;
+
+	inline function get_B17_R()
+	{
+		return _b17R.check();
+	}
+
+	public var B18_R(get, never):Bool;
+
+	inline function get_B18_R()
+	{
+		return _b18R.check();
+	}
+
+	public var B19_R(get, never):Bool;
+
+	inline function get_B19_R()
+	{
+		return _b19R.check();
+	}
+
+	public var B20_R(get, never):Bool;
+
+	inline function get_B20_R()
+	{
+		return _b20R.check();
+	}
+
+	public var B21_R(get, never):Bool;
+
+	inline function get_B21_R()
+	{
+		return _b21R.check();
+	}
+
+	public var B22_R(get, never):Bool;
+
+	inline function get_B22_R()
+	{
+		return _b22R.check();
+	}
+
+	public var B23_R(get, never):Bool;
+
+	inline function get_B23_R()
+	{
+		return _b23R.check();
+	}
+
+	public var B24_R(get, never):Bool;
+
+	inline function get_B24_R()
+	{
+		return _b24R.check();
+	}
+
+	public var B25_R(get, never):Bool;
+
+	inline function get_B25_R()
+	{
+		return _b25R.check();
+	}
+
 	public function new(name, scheme = None)
 	{
 		super(name);
@@ -658,7 +1219,6 @@ class Controls extends FlxActionSet
 		add(_a6R);
 		add(_a7R);
 
-
 		add(_b1);
 		add(_b2);
 		add(_b3);
@@ -668,6 +1228,22 @@ class Controls extends FlxActionSet
 		add(_b7);
 		add(_b8);
 		add(_b9);
+		add(_b10);
+		add(_b11);
+		add(_b12);
+		add(_b13);
+		add(_b14);
+		add(_b15);
+		add(_b16);
+		add(_b17);
+		add(_b18);
+		add(_b19);
+		add(_b20);
+		add(_b21);
+		add(_b22);
+		add(_b23);
+		add(_b24);
+		add(_b25);
 
 		add(_b1P);
 		add(_b2P);
@@ -678,6 +1254,22 @@ class Controls extends FlxActionSet
 		add(_b7P);
 		add(_b8P);
 		add(_b9P);
+		add(_b10P);
+		add(_b11P);
+		add(_b12P);
+		add(_b13P);
+		add(_b14P);
+		add(_b15P);
+		add(_b16P);
+		add(_b17P);
+		add(_b18P);
+		add(_b19P);
+		add(_b20P);
+		add(_b21P);
+		add(_b22P);
+		add(_b23P);
+		add(_b24P);
+		add(_b25P);
 
 		add(_b1R);
 		add(_b2R);
@@ -688,109 +1280,28 @@ class Controls extends FlxActionSet
 		add(_b7R);
 		add(_b8R);
 		add(_b9R);
+		add(_b10R);
+		add(_b11R);
+		add(_b12R);
+		add(_b13R);
+		add(_b14R);
+		add(_b15R);
+		add(_b16R);
+		add(_b17R);
+		add(_b18R);
+		add(_b19R);
+		add(_b20R);
+		add(_b21R);
+		add(_b22R);
+		add(_b23R);
+		add(_b24R);
+		add(_b25R);
 
 		for (action in digitalActions)
 			byName[action.name] = action;
 
 		setKeyboardScheme(scheme, false);
 	}
-	#else
-	public function new(name, scheme:KeyboardScheme = null)
-	{
-		super(name);
-
-		add(_ui_up);
-		add(_ui_left);
-		add(_ui_right);
-		add(_ui_down);
-		add(_ui_upP);
-		add(_ui_leftP);
-		add(_ui_rightP);
-		add(_ui_downP);
-		add(_ui_upR);
-		add(_ui_leftR);
-		add(_ui_rightR);
-		add(_ui_downR);
-		add(_note_up);
-		add(_note_left);
-		add(_note_right);
-		add(_note_down);
-		add(_note_upP);
-		add(_note_leftP);
-		add(_note_rightP);
-		add(_note_downP);
-		add(_note_upR);
-		add(_note_leftR);
-		add(_note_rightR);
-		add(_note_downR);
-		add(_accept);
-		add(_back);
-		add(_pause);
-		add(_reset);
-
-		add(_a1);
-		add(_a2);
-		add(_a3);
-		add(_a4);
-		add(_a5);
-		add(_a6);
-		add(_a7);
-
-		add(_a1P);
-		add(_a2P);
-		add(_a3P);
-		add(_a4P);
-		add(_a5P);
-		add(_a6P);
-		add(_a7P);
-
-		add(_a1R);
-		add(_a2R);
-		add(_a3R);
-		add(_a4R);
-		add(_a5R);
-		add(_a6R);
-		add(_a7R);
-
-
-		add(_b1);
-		add(_b2);
-		add(_b3);
-		add(_b4);
-		add(_b5);
-		add(_b6);
-		add(_b7);
-		add(_b8);
-		add(_b9);
-
-		add(_b1P);
-		add(_b2P);
-		add(_b3P);
-		add(_b4P);
-		add(_b5P);
-		add(_b6P);
-		add(_b7P);
-		add(_b8P);
-		add(_b9P);
-
-		add(_b1R);
-		add(_b2R);
-		add(_b3R);
-		add(_b4R);
-		add(_b5R);
-		add(_b6R);
-		add(_b7R);
-		add(_b8R);
-		add(_b9R);
-
-		for (action in digitalActions)
-			byName[action.name] = action;
-			
-		if (scheme == null)
-			scheme = None;
-		setKeyboardScheme(scheme, false);
-	}
-	#end
 
 	override function update()
 	{
@@ -848,7 +1359,6 @@ class Controls extends FlxActionSet
 			case A6: _a6;
 			case A7: _a7;
 
-
 			case B1: _b1;
 			case B2: _b2;
 			case B3: _b3;
@@ -858,6 +1368,22 @@ class Controls extends FlxActionSet
 			case B7: _b7;
 			case B8: _b8;
 			case B9: _b9;
+			case B10: _b10;
+			case B11: _b11;
+			case B12: _b12;
+			case B13: _b13;
+			case B14: _b14;
+			case B15: _b15;
+			case B16: _b16;
+			case B17: _b17;
+			case B18: _b18;
+			case B19: _b19;
+			case B20: _b20;
+			case B21: _b21;
+			case B22: _b22;
+			case B23: _b23;
+			case B24: _b24;
+			case B25: _b25;
 		}
 	}
 
@@ -947,7 +1473,6 @@ class Controls extends FlxActionSet
 				func(_a7P, JUST_PRESSED);
 				func(_a7R, JUST_RELEASED);
 
-
 			case B1:
 				func(_b1, PRESSED);
 				func(_b1P, JUST_PRESSED);
@@ -984,6 +1509,46 @@ class Controls extends FlxActionSet
 				func(_b9, PRESSED);
 				func(_b9P, JUST_PRESSED);
 				func(_b9R, JUST_RELEASED);
+			case B10:
+				func(_b10, PRESSED);
+				func(_b10P, JUST_PRESSED);
+				func(_b10R, JUST_RELEASED);
+			case B11:
+				func(_b11, PRESSED);
+				func(_b11P, JUST_PRESSED);
+				func(_b11R, JUST_RELEASED);
+			case B12:
+				func(_b2, PRESSED);
+				func(_b2P, JUST_PRESSED);
+				func(_b2R, JUST_RELEASED);
+			case B13:
+				func(_b3, PRESSED);
+				func(_b3P, JUST_PRESSED);
+				func(_b3R, JUST_RELEASED);
+			case B14:
+				func(_b4, PRESSED);
+				func(_b4P, JUST_PRESSED);
+				func(_b4R, JUST_RELEASED);
+			case B15:
+				func(_b5, PRESSED);
+				func(_b5P, JUST_PRESSED);
+				func(_b5R, JUST_RELEASED);
+			case B16:
+				func(_b6, PRESSED);
+				func(_b6P, JUST_PRESSED);
+				func(_b6R, JUST_RELEASED);
+			case B17:
+				func(_b7, PRESSED);
+				func(_b7P, JUST_PRESSED);
+				func(_b7R, JUST_RELEASED);
+			case B18:
+				func(_b8, PRESSED);
+				func(_b8P, JUST_PRESSED);
+				func(_b8R, JUST_RELEASED);
+			case B19:
+				func(_b9, PRESSED);
+				func(_b9P, JUST_PRESSED);
+				func(_b9R, JUST_RELEASED);
 		}
 	}
 
@@ -1010,7 +1575,6 @@ class Controls extends FlxActionSet
 
 	public function copyFrom(controls:Controls, ?device:Device)
 	{
-		#if (haxe >= "4.0.0")
 		for (name => action in controls.byName)
 		{
 			for (input in action.inputs)
@@ -1019,31 +1583,14 @@ class Controls extends FlxActionSet
 					byName[name].add(cast input);
 			}
 		}
-		#else
-		for (name in controls.byName.keys())
-		{
-			var action = controls.byName[name];
-			for (input in action.inputs)
-			{
-				if (device == null || isDevice(input, device))
-				byName[name].add(cast input);
-			}
-		}
-		#end
 
 		switch (device)
 		{
 			case null:
 				// add all
-				#if (haxe >= "4.0.0")
 				for (gamepad in controls.gamepadsAdded)
 					if (!gamepadsAdded.contains(gamepad))
 						gamepadsAdded.push(gamepad);
-				#else
-				for (gamepad in controls.gamepadsAdded)
-					if (gamepadsAdded.indexOf(gamepad) == -1)
-					  gamepadsAdded.push(gamepad);
-				#end
 
 				mergeKeyboardScheme(controls.keyboardScheme);
 
@@ -1080,15 +1627,13 @@ class Controls extends FlxActionSet
 	public function bindKeys(control:Control, keys:Array<FlxKey>)
 	{
 		var copyKeys:Array<FlxKey> = keys.copy();
-		for (i in 0...copyKeys.length) {
-			if(i == NONE) copyKeys.remove(i);
+		for (i in 0...copyKeys.length)
+		{
+			if (i == NONE)
+				copyKeys.remove(i);
 		}
 
-		#if (haxe >= "4.0.0")
 		inline forEachBound(control, (action, state) -> addKeys(action, copyKeys, state));
-		#else
-		forEachBound(control, function(action, state) addKeys(action, copyKeys, state));
-		#end
 	}
 
 	/**
@@ -1098,21 +1643,19 @@ class Controls extends FlxActionSet
 	public function unbindKeys(control:Control, keys:Array<FlxKey>)
 	{
 		var copyKeys:Array<FlxKey> = keys.copy();
-		for (i in 0...copyKeys.length) {
-			if(i == NONE) copyKeys.remove(i);
+		for (i in 0...copyKeys.length)
+		{
+			if (i == NONE)
+				copyKeys.remove(i);
 		}
 
-		#if (haxe >= "4.0.0")
 		inline forEachBound(control, (action, _) -> removeKeys(action, copyKeys));
-		#else
-		forEachBound(control, function(action, _) removeKeys(action, copyKeys));
-		#end
 	}
 
 	inline static function addKeys(action:FlxActionDigital, keys:Array<FlxKey>, state:FlxInputState)
 	{
 		for (key in keys)
-			if(key != NONE)
+			if (key != NONE)
 				action.addKey(key, state);
 	}
 
@@ -1133,8 +1676,7 @@ class Controls extends FlxActionSet
 			removeKeyboard();
 
 		keyboardScheme = scheme;
-		
-		#if (haxe >= "4.0.0")
+
 		switch (scheme)
 		{
 			case Solo:
@@ -1149,7 +1691,7 @@ class Controls extends FlxActionSet
 				inline bindKeys(Control.ACCEPT, [Z, SPACE, ENTER]);
 				inline bindKeys(Control.BACK, [X, BACKSPACE, ESCAPE]);
 				inline bindKeys(Control.PAUSE, [P, ENTER, ESCAPE]);
-				//inline bindKeys(Control.RESET, []);
+			// inline bindKeys(Control.RESET, []);
 			case Duo(true):
 				inline bindKeys(Control.UI_UP, [W]);
 				inline bindKeys(Control.UI_DOWN, [S]);
@@ -1162,7 +1704,7 @@ class Controls extends FlxActionSet
 				inline bindKeys(Control.ACCEPT, [G, Z]);
 				inline bindKeys(Control.BACK, [H, X]);
 				inline bindKeys(Control.PAUSE, [ONE]);
-				//inline bindKeys(Control.RESET, [R]);
+			// inline bindKeys(Control.RESET, [R]);
 			case Duo(false):
 				inline bindKeys(Control.UI_UP, [FlxKey.UP]);
 				inline bindKeys(Control.UI_DOWN, [FlxKey.DOWN]);
@@ -1175,56 +1717,10 @@ class Controls extends FlxActionSet
 				inline bindKeys(Control.ACCEPT, [O]);
 				inline bindKeys(Control.BACK, [P]);
 				inline bindKeys(Control.PAUSE, [ENTER]);
-				//inline bindKeys(Control.RESET, [BACKSPACE]);
+			// inline bindKeys(Control.RESET, [BACKSPACE]);
 			case None: // nothing
 			case Custom: // nothing
 		}
-		#else
-		switch (scheme)
-		{
-			case Solo:
-				bindKeys(Control.UI_UP, [W, FlxKey.UP]);
-				bindKeys(Control.UI_DOWN, [S, FlxKey.DOWN]);
-				bindKeys(Control.UI_LEFT, [A, FlxKey.LEFT]);
-				bindKeys(Control.UI_RIGHT, [D, FlxKey.RIGHT]);
-				bindKeys(Control.NOTE_UP, [W, FlxKey.UP]);
-				bindKeys(Control.NOTE_DOWN, [S, FlxKey.DOWN]);
-				bindKeys(Control.NOTE_LEFT, [A, FlxKey.LEFT]);
-				bindKeys(Control.NOTE_RIGHT, [D, FlxKey.RIGHT]);
-				bindKeys(Control.ACCEPT, [Z, SPACE, ENTER]);
-				bindKeys(Control.BACK, [BACKSPACE, ESCAPE]);
-				bindKeys(Control.PAUSE, [P, ENTER, ESCAPE]);
-				//bindKeys(Control.RESET, [R]);
-			case Duo(true):
-				bindKeys(Control.UI_UP, [W]);
-				bindKeys(Control.UI_DOWN, [S]);
-				bindKeys(Control.UI_LEFT, [A]);
-				bindKeys(Control.UI_RIGHT, [D]);
-				bindKeys(Control.NOTE_UP, [W]);
-				bindKeys(Control.NOTE_DOWN, [S]);
-				bindKeys(Control.NOTE_LEFT, [A]);
-				bindKeys(Control.NOTE_RIGHT, [D]);
-				bindKeys(Control.ACCEPT, [G, Z]);
-				bindKeys(Control.BACK, [H, X]);
-				bindKeys(Control.PAUSE, [ONE]);
-				//bindKeys(Control.RESET, [R]);
-			case Duo(false):
-				bindKeys(Control.UI_UP, [FlxKey.UP]);
-				bindKeys(Control.UI_DOWN, [FlxKey.DOWN]);
-				bindKeys(Control.UI_LEFT, [FlxKey.LEFT]);
-				bindKeys(Control.UI_RIGHT, [FlxKey.RIGHT]);
-				bindKeys(Control.NOTE_UP, [FlxKey.UP]);
-				bindKeys(Control.NOTE_DOWN, [FlxKey.DOWN]);
-				bindKeys(Control.NOTE_LEFT, [FlxKey.LEFT]);
-				bindKeys(Control.NOTE_RIGHT, [FlxKey.RIGHT]);
-				bindKeys(Control.ACCEPT, [O]);
-				bindKeys(Control.BACK, [P]);
-				bindKeys(Control.PAUSE, [ENTER]);
-				//bindKeys(Control.RESET, [BACKSPACE]);
-			case None: // nothing
-			case Custom: // nothing
-		}
-		#end
 	}
 
 	function removeKeyboard()
@@ -1244,27 +1740,17 @@ class Controls extends FlxActionSet
 	public function addGamepad(id:Int, ?buttonMap:Map<Control, Array<FlxGamepadInputID>>):Void
 	{
 		gamepadsAdded.push(id);
-		
-		#if (haxe >= "4.0.0")
+
 		for (control => buttons in buttonMap)
-			inline bindButtons(control, id, buttons);
-		#else
-		for (control in buttonMap.keys())
-			bindButtons(control, id, buttonMap[control]);
-		#end
+		inline bindButtons(control, id, buttons);
 	}
 
 	inline function addGamepadLiteral(id:Int, ?buttonMap:Map<Control, Array<FlxGamepadInputID>>):Void
 	{
 		gamepadsAdded.push(id);
 
-		#if (haxe >= "4.0.0")
 		for (control => buttons in buttonMap)
-			inline bindButtons(control, id, buttons);
-		#else
-		for (control in buttonMap.keys())
-			bindButtons(control, id, buttonMap[control]);
-		#end
+		inline bindButtons(control, id, buttons);
 	}
 
 	public function removeGamepad(deviceID:Int = FlxInputDeviceID.ALL):Void
@@ -1285,7 +1771,6 @@ class Controls extends FlxActionSet
 
 	public function addDefaultGamepad(id):Void
 	{
-		#if !switch
 		addGamepadLiteral(id, [
 			Control.ACCEPT => [A],
 			Control.BACK => [B],
@@ -1300,24 +1785,6 @@ class Controls extends FlxActionSet
 			Control.PAUSE => [START],
 			Control.RESET => [Y]
 		]);
-		#else
-		addGamepadLiteral(id, [
-			//Swap A and B for switch
-			Control.ACCEPT => [B],
-			Control.BACK => [A],
-			Control.UI_UP => [DPAD_UP, LEFT_STICK_DIGITAL_UP, RIGHT_STICK_DIGITAL_UP],
-			Control.UI_DOWN => [DPAD_DOWN, LEFT_STICK_DIGITAL_DOWN, RIGHT_STICK_DIGITAL_DOWN],
-			Control.UI_LEFT => [DPAD_LEFT, LEFT_STICK_DIGITAL_LEFT, RIGHT_STICK_DIGITAL_LEFT],
-			Control.UI_RIGHT => [DPAD_RIGHT, LEFT_STICK_DIGITAL_RIGHT, RIGHT_STICK_DIGITAL_RIGHT],
-			Control.NOTE_UP => [DPAD_UP, LEFT_STICK_DIGITAL_UP, RIGHT_STICK_DIGITAL_UP],
-			Control.NOTE_DOWN => [DPAD_DOWN, LEFT_STICK_DIGITAL_DOWN, RIGHT_STICK_DIGITAL_DOWN],
-			Control.NOTE_LEFT => [DPAD_LEFT, LEFT_STICK_DIGITAL_LEFT, RIGHT_STICK_DIGITAL_LEFT],
-			Control.NOTE_RIGHT => [DPAD_RIGHT, LEFT_STICK_DIGITAL_RIGHT, RIGHT_STICK_DIGITAL_RIGHT],
-			Control.PAUSE => [START],
-			//Swap Y and X for switch
-			Control.RESET => [Y],
-		]);
-		#end
 	}
 
 	/**
@@ -1326,11 +1793,7 @@ class Controls extends FlxActionSet
 	 */
 	public function bindButtons(control:Control, id, buttons)
 	{
-		#if (haxe >= "4.0.0")
 		inline forEachBound(control, (action, state) -> addButtons(action, buttons, state, id));
-		#else
-		forEachBound(control, function(action, state) addButtons(action, buttons, state, id));
-		#end
 	}
 
 	/**
@@ -1339,11 +1802,7 @@ class Controls extends FlxActionSet
 	 */
 	public function unbindButtons(control:Control, gamepadID:Int, buttons)
 	{
-		#if (haxe >= "4.0.0")
 		inline forEachBound(control, (action, _) -> removeButtons(action, gamepadID, buttons));
-		#else
-		forEachBound(control, function(action, _) removeButtons(action, gamepadID, buttons));
-		#end
 	}
 
 	inline static function addButtons(action:FlxActionDigital, buttons:Array<FlxGamepadInputID>, state, id)
