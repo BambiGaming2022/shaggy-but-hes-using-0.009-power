@@ -129,10 +129,10 @@ class MASKstate extends MusicBeatState
 
 		persistentUpdate = persistentDraw = true;
 
-		dtBg = new FlxBackdrop(null, 1, 1, true, true);
+		dtBg = new FlxBackdrop(null, #if (flixel < "5.0.0") 1, 1, true, true #else XY #end);
 		dtBg.loadGraphic(Paths.image('MASK/menu/grid', 'shared'));
 
-		dtBgBg = new FlxBackdrop(null, 1, 1, true, true);
+		dtBgBg = new FlxBackdrop(null, #if (flixel < "5.0.0") 1, 1, true, true #else XY #end);
 		dtBgBg.x += 20;
 		dtBgBg.loadGraphic(Paths.image('MASK/menu/grid', 'shared'));
 		dtBgBg.alpha = 0.5;
@@ -527,7 +527,7 @@ class MASKstate extends MusicBeatState
 			afterAction = 'exit';
 			instList = [''];
 			expList = ['n_normal'];
-			dial = ['tu cuenta de freefire ha sido borrada'];
+			dial = ['tu cuenta de freefire ha sido borrada']; // NO PUEDE SER!!!! NOOOOOOOOOOOOOOOOOOOOOOO!!!!!!!!
 			textSetup();
 			state = 2;
 		}

@@ -34,7 +34,7 @@ class Note extends FlxSprite
 
 	public static var scales:Array<Float> = [0.7, 0.6, 0.55, 0.46, 0.24];
 	public static var swidths:Array<Float> = [160, 120, 110, 90, 48];
-	public static var posRest:Array<Int> = [0, 35, 50, 70, 70, 70, 70,];
+	public static var posRest:Array<Int> = [0, 35, 50, 70, 70, 70, 70];
 
 	public static var swagWidth:Float = 0.7;
 	public static var PURP_NOTE:Int = 0;
@@ -52,9 +52,9 @@ class Note extends FlxSprite
 					colorSwap.brightness = 0;
 
 				default:
-					colorSwap.hue = ClientPrefs.arrowHSV[noteData % 4][0] / 360;
-					colorSwap.saturation = ClientPrefs.arrowHSV[noteData % 4][1] / 100;
-					colorSwap.brightness = ClientPrefs.arrowHSV[noteData % 4][2] / 100;
+					colorSwap.hue = ClientPrefs.arrowHSV[noteData % PlayState.SONG.mania][0] / 360;
+					colorSwap.saturation = ClientPrefs.arrowHSV[noteData % PlayState.SONG.mania][1] / 100;
+					colorSwap.brightness = ClientPrefs.arrowHSV[noteData % PlayState.SONG.mania][2] / 100;
 			}
 			noteType = value;
 		}
@@ -107,7 +107,7 @@ class Note extends FlxSprite
 				isPixel = true;
 
 			default:
-				frames = Paths.getSparrowAtlas('NOTE_assets');
+				frames = Paths.getSparrowAtlas(PlayState.SONG.arrowSkin != '' ? PlayState.SONG.arrowSkin : 'NOTE_assets');
 				loadNoteAnims();
 				antialiasing = ClientPrefs.globalAntialiasing;
 		}
@@ -198,7 +198,7 @@ class Note extends FlxSprite
 	}
 
 	function loadNoteAnims() {
-		for (i in 0...26)
+		for (i in 0...PlayState.SONG.mania % (Main.ammo[PlayState.SONG.mania % Main.ammo.length - 1]))
 		{
 			animation.addByPrefix(Main.gfxLetter[i], Main.gfxLetter[i] + '0');
 
@@ -212,9 +212,9 @@ class Note extends FlxSprite
 		var ogW = width;
 		var ogH = height;
 		if (!isSustainNote)
-			setGraphicSize(Std.int(ogW * scales[PlayState.SONG.mania]));
+			setGraphicSize(Std.int(ogW * scales[PlayState.SONG.mania % (Main.ammo[PlayState.SONG.mania % Main.ammo.length - 1])]));
 		else
-			setGraphicSize(Std.int(ogW * scales[PlayState.SONG.mania]), Std.int(ogH * scales[0]));
+			setGraphicSize(Std.int(ogW * scales[PlayState.SONG.mania % (Main.ammo[PlayState.SONG.mania % Main.ammo.length - 1])]), Std.int(ogH * scales[0]));
 
 		updateHitbox();
 	}

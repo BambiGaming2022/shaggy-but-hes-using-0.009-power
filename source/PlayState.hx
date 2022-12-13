@@ -296,8 +296,7 @@ class PlayState extends MusicBeatState
 		FlxG.cameras.add(camOther);
 		grpNoteSplashes = new FlxTypedGroup<NoteSplash>();
 
-		FlxCamera.defaultCameras = [camGame];
-		//FlxG.cameras.setDefaultDrawTarget(camGame, true);
+		FlxG.cameras.setDefaultDrawTarget(camGame, true);
 
 		persistentUpdate = true;
 		persistentDraw = true;
@@ -1673,10 +1672,11 @@ class PlayState extends MusicBeatState
 		var songName:String = SONG.song.toLowerCase();
 		var file:String = Paths.json(songName + '/events');
 		#if sys
-		if (sys.FileSystem.exists(file)) {
+		if (sys.FileSystem.exists(file))
 		#else
-		if (OpenFlAssets.exists(file)) {
+		if (OpenFlAssets.exists(file))
 		#end
+		{
 			var eventsData:Array<SwagSection> = Song.loadFromJson('events', songName).notes;
 			for (section in eventsData)
 			{
@@ -1696,7 +1696,7 @@ class PlayState extends MusicBeatState
 			{
 				if(songNotes[1] > -1) { //Real notes
 					var daStrumTime:Float = songNotes[0];
-					var daNoteData:Int = Std.int(songNotes[1] % Main.ammo[mania]);
+					var daNoteData:Int = Std.int(songNotes[1]) % Main.ammo[mania];
 
 					var gottaHitNote:Bool = section.mustHitSection;
 

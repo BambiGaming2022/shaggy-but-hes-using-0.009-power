@@ -201,7 +201,7 @@ class ChartingState extends MusicBeatState
 		if(curSection >= _song.notes.length) curSection = _song.notes.length - 1;
 
 		FlxG.mouse.visible = true;
-		FlxG.save.bind('funkin', 'ninjamuffin99');
+		FlxG.save.bind('funkin' #if (flixel < "5.0.0"), 'ninjamuffin99' #end);
 
 		tempBpm = _song.bpm;
 
@@ -1315,7 +1315,7 @@ class ChartingState extends MusicBeatState
 		updateSectionUI();
 	}
 
-	function changeSection(sec:Int = 0, ?updateMusic:Bool = true):Void
+	function changeSection(sec:Int = 0, updateMusic:Bool = true):Void
 	{
 		trace('changing section' + sec);
 
@@ -1504,7 +1504,7 @@ class ChartingState extends MusicBeatState
 
 		// NEXT SECTION
 		if(curSection < _song.notes.length-1) {
-			for (i in _song.notes[curSection+1].sectionNotes)
+			for (i in _song.notes[curSection + 1].sectionNotes)
 			{
 				var note:Note = setupNoteData(i, true);
 				note.alpha = 0.6;

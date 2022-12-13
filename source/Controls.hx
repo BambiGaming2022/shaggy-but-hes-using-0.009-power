@@ -1518,37 +1518,61 @@ class Controls extends FlxActionSet
 				func(_b11P, JUST_PRESSED);
 				func(_b11R, JUST_RELEASED);
 			case B12:
-				func(_b2, PRESSED);
-				func(_b2P, JUST_PRESSED);
-				func(_b2R, JUST_RELEASED);
+				func(_b12, PRESSED);
+				func(_b12P, JUST_PRESSED);
+				func(_b12R, JUST_RELEASED);
 			case B13:
-				func(_b3, PRESSED);
-				func(_b3P, JUST_PRESSED);
-				func(_b3R, JUST_RELEASED);
+				func(_b13, PRESSED);
+				func(_b13P, JUST_PRESSED);
+				func(_b13R, JUST_RELEASED);
 			case B14:
-				func(_b4, PRESSED);
-				func(_b4P, JUST_PRESSED);
-				func(_b4R, JUST_RELEASED);
+				func(_b14, PRESSED);
+				func(_b14P, JUST_PRESSED);
+				func(_b14R, JUST_RELEASED);
 			case B15:
-				func(_b5, PRESSED);
-				func(_b5P, JUST_PRESSED);
-				func(_b5R, JUST_RELEASED);
+				func(_b15, PRESSED);
+				func(_b15P, JUST_PRESSED);
+				func(_b15R, JUST_RELEASED);
 			case B16:
-				func(_b6, PRESSED);
-				func(_b6P, JUST_PRESSED);
-				func(_b6R, JUST_RELEASED);
+				func(_b16, PRESSED);
+				func(_b16P, JUST_PRESSED);
+				func(_b16R, JUST_RELEASED);
 			case B17:
-				func(_b7, PRESSED);
-				func(_b7P, JUST_PRESSED);
-				func(_b7R, JUST_RELEASED);
+				func(_b17, PRESSED);
+				func(_b17P, JUST_PRESSED);
+				func(_b17R, JUST_RELEASED);
 			case B18:
-				func(_b8, PRESSED);
-				func(_b8P, JUST_PRESSED);
-				func(_b8R, JUST_RELEASED);
+				func(_b18, PRESSED);
+				func(_b18P, JUST_PRESSED);
+				func(_b18R, JUST_RELEASED);
 			case B19:
-				func(_b9, PRESSED);
-				func(_b9P, JUST_PRESSED);
-				func(_b9R, JUST_RELEASED);
+				func(_b19, PRESSED);
+				func(_b19P, JUST_PRESSED);
+				func(_b19R, JUST_RELEASED);
+			case B20:
+				func(_b20, PRESSED);
+				func(_b20P, JUST_PRESSED);
+				func(_b20R, JUST_RELEASED);
+			case B21:
+				func(_b21, PRESSED);
+				func(_b21P, JUST_PRESSED);
+				func(_b21R, JUST_RELEASED);
+			case B22:
+				func(_b22, PRESSED);
+				func(_b22P, JUST_PRESSED);
+				func(_b22R, JUST_RELEASED);
+			case B23:
+				func(_b23, PRESSED);
+				func(_b23P, JUST_PRESSED);
+				func(_b23R, JUST_RELEASED);
+			case B24:
+				func(_b24, PRESSED);
+				func(_b24P, JUST_PRESSED);
+				func(_b24R, JUST_RELEASED);
+			case B25:
+				func(_b25, PRESSED);
+				func(_b25P, JUST_PRESSED);
+				func(_b25R, JUST_RELEASED);
 		}
 	}
 

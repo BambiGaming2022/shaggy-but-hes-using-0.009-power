@@ -214,7 +214,7 @@ class ClientPrefs {
 		}
 
 		var save:FlxSave = new FlxSave();
-		save.bind('controls', 'shaggymod');
+		save.bind('controls' #if (flixel < "5.0.0"), 'shaggymod' #end);
 		if(save != null && save.data.customControls != null) {
 			reloadControls(save.data.customControls);
 		}
@@ -244,10 +244,10 @@ class ClientPrefs {
 
 	private static function removeControls(controlArray:Array<FlxKey>) {
 		for (i in 0...keyBinds.length) {
-			var controlValue:Int = i*2;
+			var controlValue:Int = i * 2;
 			var controlsToRemove:Array<FlxKey> = [];
 			for (j in 0...2) {
-				if(controlArray[controlValue+j] != NONE) {
+				if(controlArray[controlValue + j] != NONE) {
 					controlsToRemove.push(controlArray[controlValue+j]);
 				}
 			}

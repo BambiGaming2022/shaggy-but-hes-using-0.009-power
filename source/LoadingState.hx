@@ -95,7 +95,7 @@ class LoadingState extends MusicBeatState
 		}
 	}
 	
-	function checkLibrary(library:String, ?doCheck:Bool = false) {
+	function checkLibrary(library:String, doCheck:Bool = false) {
 		if(!doCheck || !ClientPrefs.lowQuality) {
 			trace(Assets.hasLibrary(library));
 			if (Assets.getLibrary(library) == null)
