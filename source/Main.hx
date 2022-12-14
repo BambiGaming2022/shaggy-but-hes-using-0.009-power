@@ -23,14 +23,14 @@ class Main extends Sprite
 	public static var menuMusPlay:Bool = false;
 	public static var skipDes:Bool = false;
 	public static var ammo:Array<Int> = [4, 6, 7, 9, 26];
-	public static var gfxIndex:Array<Dynamic> = [
+	public static var gfxIndex:Array<Array<Int>> = [
 		[0, 1, 2, 3],
 		[0, 2, 3, 5, 1, 8],
 		[0, 2, 3, 4, 5, 1, 8],
 		[0, 1, 2, 3, 4, 5, 6, 7, 8],
 		[0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
 	];
-	public static var gfxHud:Array<Dynamic> = [
+	public static var gfxHud:Array<Array<Int>> = [
 		[0, 1, 2, 3],
 		[0, 2, 3, 0, 1, 3],
 		[0, 2, 3, 4, 0, 1, 3],
@@ -45,7 +45,9 @@ class Main extends Sprite
 	];
 	public static var letterMax:Array<Int> = [26, 9, 4];
 	public static var skinName:Array<String> = ['assets', 'alter'];
-	public static var gfxDir:Array<String> = ['SHARPLEFT', 'LEFT', 'DOWN', 'UP', 'RIGHT', 'SPACE', 'PLUS', 'SQUARE'];
+	public static var gfxDir:Array<String> = [
+		'SHARPLEFT', 'LEFT', 'DOWN', 'UP', 'RIGHT', 'SPACE', 'PLUS', 'SQUARE'
+	];
 	public static var charDir:Array<String> = [
 		'LEFT', 'LEFT', 'LEFT', 'LEFT', 'LEFT',
 		'DOWN',
@@ -88,6 +90,14 @@ class Main extends Sprite
 		'jonquil',
 		'pinky'
 	];
+	public static var oldGfxLetter:Array<String> = [
+		'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'
+	];
+	public static function getGfxLetter(mania:Int):Array<String> {
+		if(mania >= 4)
+			return gfxLetter;
+		return oldGfxLetter;
+	}
 
 	// You can pretty much ignore everything from here on - your code should go in your states.
 

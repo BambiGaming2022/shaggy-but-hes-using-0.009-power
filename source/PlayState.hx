@@ -1874,7 +1874,10 @@ class PlayState extends MusicBeatState
 
 				default:
 					var skin:String = 'NOTE_assets';
-					if(SONG.arrowSkin != null && SONG.arrowSkin.length > 1) skin = SONG.arrowSkin;
+					if(mania < 4)
+						skin = 'OLD_NOTE_assets';
+
+					if(SONG.arrowSkin != null && SONG.arrowSkin.replace(' ', '').length > 1) skin = SONG.arrowSkin;
 
 					babyArrow.frames = Paths.getSparrowAtlas(skin);
 					babyArrow.animation.addByPrefix('green', 'arrowUP');
@@ -1886,9 +1889,9 @@ class PlayState extends MusicBeatState
 					babyArrow.setGraphicSize(Std.int(babyArrow.width * Note.scales[mania]));
 
 					babyArrow.x += Note.swidths[mania] * Note.swagWidth * Math.abs(i);
-					
-					var dirName = Main.gfxDir[Main.gfxHud[mania][i]];
-					var pressName = Main.gfxLetter[Main.gfxIndex[mania][i]];
+
+					var dirName = Main.gfxDir[Main.gfxHud[mania][i] % Main.gfxDir.length - 1];
+					var pressName = Main.getGfxLetter(mania)[Main.gfxIndex[mania][i]];
 					babyArrow.animation.addByPrefix('static', 'arrow' + dirName);
 					babyArrow.animation.addByPrefix('pressed', pressName + ' press', 24, false);
 					babyArrow.animation.addByPrefix('confirm', pressName + ' confirm', 24, false);
@@ -4129,6 +4132,25 @@ class PlayState extends MusicBeatState
 			controls.B9_P
 		];
 
+		var AAAAHHH = nP.concat([
+			controls.B10_P,
+			controls.B11_P,
+			controls.B12_P,
+			controls.B13_P,
+			controls.B14_P,
+			controls.B15_P,
+			controls.B16_P,
+			controls.B17_P,
+			controls.B18_P,
+			controls.B19_P,
+			controls.B20_P,
+			controls.B21_P,
+			controls.B22_P,
+			controls.B23_P,
+			controls.B24_P,
+			controls.B25_P
+		]);
+
 		var controlArray:Array<Bool> = [controls.NOTE_LEFT_P, controls.NOTE_DOWN_P, controls.NOTE_UP_P, controls.NOTE_RIGHT_P];
 
 		switch (mania)
@@ -4139,6 +4161,8 @@ class PlayState extends MusicBeatState
 				controlArray = vP;
 			case 3:
 				controlArray = nP;
+			case 4:
+				controlArray = AAAAHHH;
 		}
 		for (i in 0...controlArray.length) {
 			if(controlArray[i]) {
