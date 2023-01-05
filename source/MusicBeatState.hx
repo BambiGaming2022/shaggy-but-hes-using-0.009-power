@@ -25,6 +25,8 @@ class MusicBeatState extends FlxUIState
 	inline function get_controls():Controls
 		return PlayerSettings.player1.controls;
 
+	public function getAllControlsB():{normal: Array<Bool>, r: Array<Bool>, p: Array<Bool>} {
+	}
 	override function create() {
 		#if MODS_ALLOWED
 		if(!ClientPrefs.imagesPersist) {
