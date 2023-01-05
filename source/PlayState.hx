@@ -1891,7 +1891,7 @@ class PlayState extends MusicBeatState
 					babyArrow.x += Note.swidths[mania] * Note.swagWidth * Math.abs(i);
 
 					var dirName = Main.gfxDir[Main.gfxHud[mania][i] % Main.gfxDir.length - 1];
-					var pressName = Main.getGfxLetter(mania)[Main.gfxIndex[mania][i]];
+					var pressName = Main.getGfxLetter(mania)[Main.gfxIndex[mania][i]]; // purple etc
 					babyArrow.animation.addByPrefix('static', 'arrow' + dirName);
 					babyArrow.animation.addByPrefix('pressed', pressName + ' press', 24, false);
 					babyArrow.animation.addByPrefix('confirm', pressName + ' confirm', 24, false);
@@ -3866,28 +3866,9 @@ class PlayState extends MusicBeatState
 			controls.A7
 		];
 
-		var vH = [
-			controls.A1,
-			controls.A2,
-			controls.A3,
-			controls.A4,
-			controls.A5,
-			controls.A6,
-			controls.A7
-		];
+		var vH = getAllControlsA().normal;
 
-		var nH = [
-			controls.B1,
-			controls.B2,
-			controls.B3,
-			controls.B4,
-			controls.B5,
-			controls.B6,
-			controls.B7,
-			controls.B8,
-			controls.B9
-		];
-
+		var nH = getAllControlsB().normal;
 
 		var sP = [
 			controls.A1_P,
@@ -3898,28 +3879,9 @@ class PlayState extends MusicBeatState
 			controls.A7_P
 		];
 
-		var vP = [
-			controls.A1_P,
-			controls.A2_P,
-			controls.A3_P,
-			controls.A4_P,
-			controls.A5_P,
-			controls.A6_P,
-			controls.A7_P
-		];
+		var vP = getAllControlsA().p;
 
-		var nP = [
-			controls.B1_P,
-			controls.B2_P,
-			controls.B3_P,
-			controls.B4_P,
-			controls.B5_P,
-			controls.B6_P,
-			controls.B7_P,
-			controls.B8_P,
-			controls.B9_P
-		];
-
+		var nP = getAllControlsB().p;
 
 		var sR = [
 			controls.A1_R,
@@ -3940,17 +3902,7 @@ class PlayState extends MusicBeatState
 			controls.A7_R
 		];
 
-		var nR = [
-			controls.B1_R,
-			controls.B2_R,
-			controls.B3_R,
-			controls.B4_R,
-			controls.B5_R,
-			controls.B6_R,
-			controls.B7_R,
-			controls.B8_R,
-			controls.B9_R
-		];
+		var nR = getAllControlsB().r;
 
 		var upP = controls.NOTE_UP_P;
 		var rightP = controls.NOTE_RIGHT_P;

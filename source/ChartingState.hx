@@ -98,7 +98,12 @@ class ChartingState extends MusicBeatState
 
 	var highlight:FlxSprite;
 
-	public static var GRID_SIZE:Int = 40;
+	public static var GRID_SIZE(get, default):Int = 20;
+	static function get_GRID_SIZE():Int {
+		if(PlayState.SONG.mania > 4)
+			return 40;
+		return 10;
+	}
 	var CAM_OFFSET:Int = 360;
 
 	var dummyArrow:FlxSprite;

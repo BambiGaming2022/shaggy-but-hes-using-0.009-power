@@ -52,9 +52,9 @@ class Note extends FlxSprite
 					colorSwap.brightness = 0;
 
 				default:
-					colorSwap.hue = ClientPrefs.arrowHSV[noteData % PlayState.SONG.mania][0] / 360;
-					colorSwap.saturation = ClientPrefs.arrowHSV[noteData % PlayState.SONG.mania][1] / 100;
-					colorSwap.brightness = ClientPrefs.arrowHSV[noteData % PlayState.SONG.mania][2] / 100;
+					colorSwap.hue = ClientPrefs.arrowHSV[noteData % 4][0] / 360;
+					colorSwap.saturation = ClientPrefs.arrowHSV[noteData % 4][1] / 100;
+					colorSwap.brightness = ClientPrefs.arrowHSV[noteData % 4][2] / 100;
 			}
 			noteType = value;
 		}
@@ -163,7 +163,10 @@ class Note extends FlxSprite
 	function reloadNote(?prefix:String = '', ?suffix:String = '') {
 		var skin:String = PlayState.SONG.arrowSkin;
 		if(skin == null || skin.length < 1) {
-			skin = 'NOTE_assets';
+			if(PlayState.SONG.mania < 4)
+				skin = 'OLD_NOTE_assets';
+			else
+				skin = 'NOTE_assets';
 		}
 
 		var animName:String = null;
@@ -198,7 +201,7 @@ class Note extends FlxSprite
 	}
 
 	function loadNoteAnims() {
-		for (i in 0...PlayState.SONG.mania % (Main.ammo[PlayState.SONG.mania % Main.ammo.length - 1]))
+		for (i in 0...26)
 		{
 			animation.addByPrefix(Main.gfxLetter[i], Main.gfxLetter[i] + '0');
 
@@ -212,9 +215,9 @@ class Note extends FlxSprite
 		var ogW = width;
 		var ogH = height;
 		if (!isSustainNote)
-			setGraphicSize(Std.int(ogW * scales[PlayState.SONG.mania % (Main.ammo[PlayState.SONG.mania % Main.ammo.length - 1])]));
+			setGraphicSize(Std.int(ogW * scales[PlayState.SONG.mania]));
 		else
-			setGraphicSize(Std.int(ogW * scales[PlayState.SONG.mania % (Main.ammo[PlayState.SONG.mania % Main.ammo.length - 1])]), Std.int(ogH * scales[0]));
+			setGraphicSize(Std.int(ogW * scales[PlayState.SONG.mania]), Std.int(ogH * scales[0]));
 
 		updateHitbox();
 	}

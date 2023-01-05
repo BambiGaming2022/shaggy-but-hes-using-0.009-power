@@ -74,6 +74,8 @@ class ClientPrefs {
 		4, NONE,
 		2, NONE,
 		1, NONE,
+
+		// 26 keys...
 	];
 	//Every key has two binds, these binds are defined on defaultKeys! If you want your control to be changeable, you have to add it on ControlsSubState (inside OptionsState)'s list
 	public static var keyBinds:Array<Dynamic> = [
@@ -143,7 +145,7 @@ class ClientPrefs {
 		FlxG.save.flush();
 
 		var save:FlxSave = new FlxSave();
-		save.bind('controls', 'shaggymod'); //Placing this in a separate save so that it can be manually deleted without removing your Score and stuff
+		save.bind('controls' #if (flixel < "5.0.0"), 'shaggymod' #end); //Placing this in a separate save so that it can be manually deleted without removing your Score and stuff
 		save.data.customControls = lastControls;
 		save.flush();
 		FlxG.log.add("Settings saved!");
